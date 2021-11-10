@@ -15,6 +15,11 @@ html {
   font-size: 10px;
   font-family: $generic-fonts;
   text-align: center;
+
+  &.hide-static-html {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 body {

@@ -11,6 +11,7 @@ import Layout from '@/components/Layout/Layout';
 
 import { store } from '@/redux';
 import '@/utils/why-did-you-render';
+import { hideStaticHtml } from '@/data/settings';
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -32,6 +33,11 @@ function App({ Component, pageProps }: AppProps) {
       document.body.className = `${document.body.className} ${classnames(device.type, browser.name, {
         'touch-device': device.touch
       })}`.trim();
+
+      if (hideStaticHtml) {
+        // un-hide page once application kicked in
+        document.documentElement.classList.remove('hide-static-html');
+      }
     }
   }, []);
 
