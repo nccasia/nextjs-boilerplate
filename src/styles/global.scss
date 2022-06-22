@@ -1,6 +1,10 @@
 // Globals
 //
 // Global styling, normalize overwritten
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'fonts';
 @import 'polyfills';
 @import 'shared';
